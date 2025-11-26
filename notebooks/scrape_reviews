@@ -1,0 +1,39 @@
+from google_play_scraper import reviews, Sort
+import pandas as pd
+
+# App IDs
+apps = {
+    'CBE': 'com.combanketh.mobilebanking',
+    'BOA': 'com.boa.boaMobileBanking',
+    'Dashen': 'com.cr2.amolelight'
+}
+
+all_reviews = []
+
+for bank, app_id in apps.items():
+    # Fetch 500 newest reviews (to exceed 400 minimum)
+    result, _ = reviews(
+        app_id,
+        lang='en',  # English
+        country='et',  # Ethiopia
+        sort=Sort.NEWEST,  # Newest first
+        count=500  # Adjust if needed
+    )
+    
+    # Add bank name and source
+    for review in result:
+        review['bank'] = bank
+        review['source'] = 'Google Play'
+    
+    all_reviews.extend(result)
+
+# Convert to DataFrame
+df = pd.DataFrame(all_reviews)
+
+# Select relevant columns
+df = df[['content', 'score', 'at', 'bank', 'source']]  # review text, rating, date, bank, source
+df.rename(columns={'content': 'review', 'score': 'rating', 'at': 'date'}, inplace=True)
+
+# Save raw data
+df.to_csv('Data/raw_reviews.csv', index=False)
+print(f"Collected {len(df)} reviews.")
