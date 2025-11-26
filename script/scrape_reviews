@@ -11,6 +11,9 @@ apps = {
 all_reviews = []
 
 for bank, app_id in apps.items():
+        # Use reviews_all to get all reviews (up to a large limit if desired)
+        # Setting a large num can result in many requests, use with caution and respect Google's terms.
+        # For demonstration, we'll fetch a reasonable number (e.g., 500) or let reviews_all run to a high limit
     # Fetch 500 newest reviews (to exceed 400 minimum)
     result, _ = reviews(
         app_id,
