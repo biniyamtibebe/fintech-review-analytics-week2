@@ -1,38 +1,40 @@
 # Fintech Review Analytics
 ---
-## OBJECTIVE 
-This project focuses on analyzing customer satisfaction with mobile banking applications by scraping, processing, and visualizing user reviews from the Google Play Store. The goal is to enhance user experience for three Ethiopian banks:
+ ## OBJECTIVE 
+ This project focuses on analyzing customer satisfaction with mobile banking applications by scraping, processing, and visualizing user reviews from the Google Play Store. The goal is to enhance user experience for three Ethiopian banks:
 
-     Commercial Bank of Ethiopia (CBE)
-     Bank of Abyssinia (BOA)
-     Dashen Bank
+ Commercial Bank of Ethiopia (CBE)
+ Bank of Abyssinia (BOA)
+ Dashen Bank
 
-     ---
+---
 ## Task 1
  ### Overview
-This repository contains the code and documentation for the project focused on collecting and preprocessing reviews from the Google Play Store. The main objective is to gather user feedback for three banking apps, ensuring data quality and organization for further analysis.
+ This repository contains the code and documentation for the project focused on collecting and preprocessing reviews from the Google Play Store. The main objective is to gather user feedback for three banking apps, ensuring data quality and organization for further analysis.
 
-### Deliverables
-#### Data Collection:
+ ### Deliverables
+ #### Data Collection:
 
-Scraped at least 1,200 reviews (400+ from each bank).
-Collected reviews include ratings, dates, and bank names.
-Data Preprocessing:
+ - Scraped at least 1,200 reviews (400+ from each bank).
+ - Collected reviews include ratings, dates, and bank names.
 
-Cleaned and organized data saved as a CSV file.
-Handled duplicates and missing values appropriately.
-Normalized date formats to YYYY-MM-DD.
-GitHub Repository:
+ #### Data Preprocessing:
 
-Well-structured repository with frequent, meaningful commits.
-Included .gitignore and requirements.txt files.
-Documentation updated with the methodology used for scraping and preprocessing.
+ - Cleaned and organized data saved as a CSV file.
+ - Handled duplicates and missing values appropriately.
+ - Normalized date formats to YYYY-MM-DD.
 
-**Tasks Overview**
- **Task 1: Data Collection and Preprocessing**
+
+
+---
+
+ **Tasks Overview**
+ **Data Collection and Preprocessing**
+
+ ---
  ***Git Setup**
 
-Create a GitHub Repository: Initialize a new repository to manage your project.
+ Create a GitHub Repository: Initialize a new repository to manage your project.
 
  ***Include Essential Files:**
  - gitignore: Exclude unnecessary files.
@@ -52,15 +54,16 @@ Create a GitHub Repository: Initialize a new repository to manage your project.
  - Collect reviews for three banking applications.
  - Aim for a minimum of 400 reviews from each bank, resulting in over 1,200 reviews total.
 
+ ---
  ### Preprocessing
 
-***Data Cleaning:**
+ **Data Cleaning:**
  - Remove any duplicate entries.
  - Handle missing data effectively.
 
- ***Date Normalization:** Convert all dates to the format YYYY-MM-DD.
+ **Date Normalization:** Convert all dates to the format YYYY-MM-DD.
 
- ***Save Data:**
+ **Save Data:**
  Write the cleaned data to a CSV file with the following columns:
   - review
   - rating
@@ -68,13 +71,13 @@ Create a GitHub Repository: Initialize a new repository to manage your project.
   - bank
   - source
 
-----
+---
 ### Getting Started
 
   1.Clone the repository:   
-          bash
-          git clone https://github.com/biniyamtibebe/fintech-review-analytics-week2.git
-           cd Fintech-Review-Analytics
+         bash
+         git clone https://github.com/biniyamtibebe/fintech-review-analytics-week2.git
+         cd Fintech-Review-Analytics
 
  2.Install required packages:
 
