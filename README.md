@@ -94,7 +94,7 @@
          bash
          python preprocess.py
          
-         --
+         ---
 ## Task 2 – Sentiment & Thematic Analysis (Best-in-Class)
 
  - Sentiment Model: distilbert-base-uncased-finetuned-sst-2-english (Hugging Face)
@@ -122,45 +122,9 @@
          python database/load_data.py         # Insert all 1,400+ reviews
  **Verification query result (example):**
 
- **Bank**                      **Reviews**   **Avg_Rating%**   
- Commercial Bank of Ethiopia    784               3.97
- Dashen                         742               3.94
- Abyssinia                      796               2.95
+ **Bank**                    | **Reviews** |     **Avg_Rating%**
+ ----------------------------|-------------|-----------------------            
+ Commercial Bank of Ethiopia |    784      |       3.97
+ Dashen                      |    742      |       3.94
+ Abyssinia                   |    796      |       2.95
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-BankReviewsAvg Rating% NegativeCommercial Bank of Ethiopia5124.2122%Dashen Bank4784.0825%Bank of Abyssinia4323.4148%
-Quick Start (Clone & Run Everything)
-Bashgit clone https://github.com/yourusername/fintech-review-analytics.git
-cd fintech-review-analytics
-python -m venv venv && source venv/bin/activate
-pip install -r requirements.txt
-python -m spacy download en_core_web_sm
-
-# Start DB → Run pipeline
-docker run --name bank-reviews-db -e POSTGRES_PASSWORD=omega2025 -e POSTGRES_DB=bank_reviews -p 5432:5432 -d postgres:15
-python database/setup_database.py
-python database/load_data.py
