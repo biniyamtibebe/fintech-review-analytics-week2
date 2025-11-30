@@ -1,10 +1,17 @@
+# Thematic Analysis (Keyword Extraction & Clustering)
+'Extract keywords/n-grams using TF-IDF (weights important terms) and spaCy (for phrases). '
+'Then, rule-based cluster into 3-5 themes per bank (document logic, e.g., if keyword contains "login/error", assign to "Account Access Issues"). '
+'This identifies themes like "Transaction Performance" (pain point: slow transfers) or "Feature Requests" (driver: fingerprint login)'
+
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 import spacy
 from collections import Counter
 
 # Load data with sentiments
-df = pd.read_csv('sentiments_reviews.csv')
+df = pd.read_csv(r'C:\Users\hp\Pictures\fintech-review-analytics\fintech-review-analytics-week2\Data\sentiments_reviews.csv')
+#Add this before calling vectorizer.fit_transform(...):
+df['processed_review'] = df['processed_review'].fillna("")
 
 # TF-IDF for keyword extraction
 vectorizer = TfidfVectorizer(max_df=0.95, min_df=2, ngram_range=(1,3), stop_words='english')
@@ -62,4 +69,4 @@ for bank in df['bank'].unique():
 
 # Save final analyzed CSV (review, ..., sentiment_label, sentiment_score, themes as comma-str)
 df['themes'] = df['themes'].apply(lambda x: ','.join(x))
-df.to_csv('analyzed_reviews.csv', index=False)
+df.to_csv(r'C:\Users\hp\Pictures\fintech-review-analytics\fintech-review-analytics-week2\Data\thematicanalyzed_reviews.csv', index=False)
