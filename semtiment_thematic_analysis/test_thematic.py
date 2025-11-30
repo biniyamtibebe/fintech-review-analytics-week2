@@ -8,3 +8,5 @@ def test_themes():
     avg_themes = df['themes'].apply(lambda x: len(x.split(',')) if x else 0).mean()
     assert avg_themes >= 2
     print(f"average themes:{avg_themes}")
+
+    
