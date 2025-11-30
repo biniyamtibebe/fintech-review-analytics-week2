@@ -120,6 +120,7 @@
          Bash 
          python database/setup_database.py    # Create tables
          python database/load_data.py         # Insert all 1,400+ reviews
+         
  **Verification query result (example):**
 
  **Bank**                    | **Reviews** |     **Avg_Rating%**
