@@ -250,11 +250,13 @@ Frequent mentions across all banks highlight:
  - Improve error-handling messages
  - Conduct performance tuning for peak hours
  - Improve onboarding & login flow
-
+ 
 **Dashen Bank**
  - Main focus: UI/UX redesign and navigation clarity
  - Fix login instability and account access issues
  - Strengthen design consistency and user flows
+
+ --- 
 
 ### 📌 Final Summary
  - Dashen Bank performs best overall.
