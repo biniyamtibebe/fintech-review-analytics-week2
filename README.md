@@ -116,8 +116,8 @@
          sentiment_label, sentiment_score, themes, inserted_at)
  3. Run full load:
              Bash 
-            python database/setup_database.py    # Create tables
-            python database/load_data.py         # Insert all 1,400+ reviews
+                python database/setup_database.py    # Create tables
+                python database/load_data.py         # Insert all 1,400+ reviews
 ### 1.Review Volume & Average Rating
 
 | Bank                            | Review Count | Avg. Rating |
@@ -250,7 +250,7 @@ Frequent mentions across all banks highlight:
  - Improve error-handling messages
  - Conduct performance tuning for peak hours
  - Improve onboarding & login flow
- 
+
 **Dashen Bank**
  - Main focus: UI/UX redesign and navigation clarity
  - Fix login instability and account access issues
